@@ -1,0 +1,37 @@
+type octile
+height 33
+width 57
+map
+@@......@@@....@@@....@@@....@@@....@@@....@@@....@@@..@@
+@@.....W@@@W..W@@@W..W@@@W..W@@@W..W@@@W..W@@@W..W@@@W.@@
+........@@@....@@@....@@@....@@@....@@@....@@@....@@@....
+.W.......................................................
+@@@..EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE...W.
+@@@.E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E.@@@
+@@@.E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E.@@@
+.W...EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE..@@@
+....E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E..W.
+....E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E....
+.W...EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.....
+@@@.E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E..W.
+@@@.E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E.@@@
+@@@..EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE..@@@
+.W..E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E.@@@
+....E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E..W.
+.....EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.....
+.W..E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E....
+@@@.E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E..W.
+@@@..EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE..@@@
+@@@.E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E.@@@
+.W..E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E.@@@
+.....EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE...W.
+....E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E....
+.W..E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E....
+@@@..EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE...W.
+@@@.E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E.@@@
+@@@.E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E@@@E.@@@
+.W...EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE.EEE..@@@
+.......................................................W.
+....@@@....@@@....@@@....@@@....@@@....@@@....@@@........
+@@.W@@@W..W@@@W..W@@@W..W@@@W..W@@@W..W@@@W..W@@@W.....@@
+@@..@@@....@@@....@@@....@@@....@@@....@@@....@@@......@@
