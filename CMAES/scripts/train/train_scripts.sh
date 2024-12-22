@@ -1,0 +1,8 @@
+PROJECT_DIR=""
+CONFIG=""
+
+SEED=0
+NUM_WORKERS=16
+
+bash scripts/run_local.sh $CONFIG $SEED $NUM_WORKERS -p $PROJECT_DIR
+# bash scripts/run_local.sh $CONFIG $SEED $NUM_WORKERS -p $PROJECT_DIR -r $RELOAD_DIR

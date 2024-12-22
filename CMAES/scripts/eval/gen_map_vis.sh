@@ -1,0 +1,8 @@
+PROJECT_DIR=""
+
+STORE_DIR=""
+DOMAIN=kiva
+
+
+MAP_FILEPATH=""
+sh scripts/visualize_env.sh $MAP_FILEPATH $STORE_DIR $DOMAIN -p $PROJECT_DIR
