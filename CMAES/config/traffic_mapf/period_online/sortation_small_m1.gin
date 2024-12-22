@@ -1,0 +1,32 @@
+include "config/traffic_mapf/base.gin"
+
+experiment.name = "trafficMAPF sort periodical on"
+
+TrafficMAPFConfig.simu_time = 1000
+
+TrafficMAPFConfig.has_map = False
+TrafficMAPFConfig.has_path = False
+TrafficMAPFConfig.has_previous = False
+
+TrafficMAPFConfig.num_agents = 800
+
+TrafficMAPFManager.update_model_n_params = 3084
+TrafficMAPFManager.offline = False
+TrafficMAPFManager.period_online = True
+
+Manager.max_evals = 10000
+
+TrafficMAPFConfig.gen_tasks = True
+TrafficMAPFConfig.use_cached_nn = False
+TrafficMAPFConfig.use_lns = False
+
+TrafficMAPFConfig.update_gg_interval = 1
+TrafficMAPFConfig.warmup_time = 0
+
+TrafficMAPFConfig.iter_update_mdl_kwargs = {
+    "nc": 6,
+    "kernel_size": 3,
+    "n_hid_chan": 32,
+}
+
+TrafficMAPFConfig.map_path = "../Guided-PIBT/guided-pibt/benchmark-lifelong/maps/sortation_small_kiva.map"

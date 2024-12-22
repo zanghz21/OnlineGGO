@@ -1,0 +1,28 @@
+include "config/traffic_mapf/base.gin"
+
+experiment.name = "trafficMAPF random offline"
+
+TrafficMAPFManager.n_evals = 5
+
+TrafficMAPFConfig.simu_time = 1000
+TrafficMAPFConfig.has_map = False
+TrafficMAPFConfig.has_path = False
+TrafficMAPFConfig.has_previous = False
+
+TrafficMAPFConfig.num_agents = 400
+
+TrafficMAPFManager.update_model_n_params = 3948
+TrafficMAPFManager.offline = True
+
+Manager.max_evals = 50000
+
+TrafficMAPFConfig.gen_tasks = True
+TrafficMAPFConfig.use_cached_nn = True
+TrafficMAPFConfig.use_lns = False
+
+TrafficMAPFConfig.task_dist_change_interval = 200
+TrafficMAPFConfig.task_random_type = "GaussianMixed"
+TrafficMAPFConfig.task_assignment_strategy = "online_generate"
+TrafficMAPFConfig.dist_sigma = 1.5
+
+TrafficMAPFConfig.map_path = "../Guided-PIBT/guided-pibt/benchmark-lifelong/maps/pibt_random_unweight_32x32.map"

@@ -1,0 +1,22 @@
+
+
+CompetitionConfig.num_agents=400
+CompetitionConfig.simulation_time = 1000
+CompetitionConfig.iter_update_model_type = @CompetitionCNNUpdateModel
+CompetitionConfig.update_interval = 50
+CompetitionConfig.past_traffic_interval = 52
+
+CompetitionConfig.measure_names = ["wait_cost_std", "edge_weight_std"]
+CompetitionConfig.iter_update_max_iter = 5
+CompetitionConfig.iter_update_mdl_kwargs = {
+    "nc": 10,
+    "kernel_size": 3,
+    "n_hid_chan": 32,
+}
+
+CompetitionConfig.map_path = "maps/competition/human/pibt_warehouse_33x36_w_mode.json"
+CompetitionConfig.aggregation_type = "mean"
+CompetitionConfig.obj_type = "throughput"
+CompetitionConfig.bounds = (0.1, 100)
+# CompetitionConfig.iter_update_model_type = @CompetitionCNNUpdateModel
+CompetitionConfig.iter_update_max_iter = 5

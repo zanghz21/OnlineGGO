@@ -1,0 +1,34 @@
+include "config/traffic_mapf/base.gin"
+
+experiment.name = "trafficMAPF random"
+
+TrafficMAPFManager.n_evals = 5
+
+TrafficMAPFConfig.simu_time = 1000
+TrafficMAPFConfig.has_map = False
+TrafficMAPFConfig.has_path = False
+TrafficMAPFConfig.has_previous = False
+
+TrafficMAPFConfig.num_agents = 400
+# TrafficMAPFConfig.net_type = "linear"
+# TrafficMAPFManager.update_model_n_params = 400
+
+TrafficMAPFConfig.net_type = "quad"
+TrafficMAPFManager.update_model_n_params = 560
+
+# TrafficMAPFConfig.net_type = "minidnn_mlp"
+# TrafficMAPFManager.update_model_n_params = 5254
+
+Manager.max_evals = 50000
+
+TrafficMAPFConfig.gen_tasks = True
+TrafficMAPFConfig.use_cached_nn = True
+TrafficMAPFConfig.use_lns = False
+
+TrafficMAPFConfig.task_dist_change_interval = 200
+TrafficMAPFConfig.task_random_type = "GaussianMixed"
+TrafficMAPFConfig.task_assignment_strategy = "online_generate"
+TrafficMAPFConfig.dist_sigma = 1.0
+
+# TrafficMAPFConfig.all_json_path = "../Guided-PIBT/guided-pibt/benchmark-lifelong/sortation_small_0_800.json"
+TrafficMAPFConfig.map_path = "../Guided-PIBT/guided-pibt/benchmark-lifelong/maps/pibt_random_unweight_32x32.map"

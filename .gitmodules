@@ -7,3 +7,6 @@
 [submodule "Guided-PIBT/guided-pibt/pybind11"]
 	path = Guided-PIBT/guided-pibt/pybind11
 	url = git@github.com:pybind/pybind11.git
+[submodule "CMAES/pybind11"]
+	path = CMAES/pybind11
+	url = git@github.com:pybind/pybind11.git

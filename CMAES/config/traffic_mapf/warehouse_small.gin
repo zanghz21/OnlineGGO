@@ -1,0 +1,23 @@
+include "config/traffic_mapf/base.gin"
+
+
+experiment.name = "trafficMAPF warehouse small"
+
+TrafficMAPFConfig.simu_time = 1000
+
+TrafficMAPFConfig.has_map = False
+TrafficMAPFConfig.has_path = False
+TrafficMAPFConfig.has_previous = False
+
+TrafficMAPFManager.n_evals = 1
+
+TrafficMAPFConfig.win_r = 1
+TrafficMAPFConfig.net_type = "quad"
+
+TrafficMAPFManager.update_model_n_params = 192
+
+TrafficMAPFConfig.num_agents = 600
+
+TrafficMAPFConfig.gen_tasks = True
+TrafficMAPFConfig.all_json_path = ""
+TrafficMAPFConfig.map_path = "../Guided-PIBT/guided-pibt/benchmark-lifelong/maps/warehouse_small.map"

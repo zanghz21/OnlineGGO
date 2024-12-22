@@ -1,0 +1,24 @@
+include "config/traffic_mapf/base.gin"
+
+experiment.name = "trafficMAPF sortation small linear"
+
+TrafficMAPFConfig.simu_time = 1000
+TrafficMAPFConfig.has_map = False
+TrafficMAPFConfig.has_path = False
+TrafficMAPFConfig.has_previous = False
+
+TrafficMAPFConfig.num_agents = 3500
+# TrafficMAPFConfig.net_type = "linear"
+# TrafficMAPFManager.update_model_n_params = 400
+
+TrafficMAPFConfig.net_type = "quad"
+TrafficMAPFManager.update_model_n_params = 560
+
+# TrafficMAPFConfig.net_type = "minidnn_mlp"
+# TrafficMAPFManager.update_model_n_params = 5254
+
+Manager.max_evals = 20000
+
+TrafficMAPFConfig.gen_tasks = True
+TrafficMAPFConfig.use_cached_nn = False
+TrafficMAPFConfig.map_path = "../Guided-PIBT/guided-pibt/benchmark-lifelong/maps/ggo_maps/93x91.map"

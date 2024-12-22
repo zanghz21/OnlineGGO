@@ -1,0 +1,24 @@
+include "config/traffic_mapf/base.gin"
+
+
+experiment.name = "trafficMAPF warehouse 60x100 off"
+
+TrafficMAPFConfig.simu_time = 1000
+
+TrafficMAPFConfig.has_map = False
+TrafficMAPFConfig.has_path = False
+TrafficMAPFConfig.has_previous = False
+
+TrafficMAPFManager.update_model_n_params = 3948
+TrafficMAPFManager.offline = True
+
+
+Manager.max_evals = 10000
+Manager.archive_save_freq = 100
+
+TrafficMAPFConfig.num_agents = 1800
+
+TrafficMAPFConfig.gen_tasks = True
+TrafficMAPFConfig.all_json_path = ""
+TrafficMAPFConfig.use_cached_nn = True
+TrafficMAPFConfig.map_path = "../Guided-PIBT/guided-pibt/benchmark-lifelong/maps/warehouse_60x100_kiva.map"

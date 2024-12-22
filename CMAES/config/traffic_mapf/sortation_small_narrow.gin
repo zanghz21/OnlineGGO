@@ -1,0 +1,41 @@
+include "config/traffic_mapf/base.gin"
+
+experiment.name = "trafficMAPF sortation small narrow"
+
+TrafficMAPFConfig.simu_time = 1000
+TrafficMAPFConfig.n_sim = 1
+
+TrafficMAPFConfig.has_map = False
+TrafficMAPFConfig.has_path = False
+TrafficMAPFConfig.has_previous = False
+
+TrafficMAPFConfig.num_agents = 800
+# TrafficMAPFConfig.net_type = "linear"
+# TrafficMAPFManager.update_model_n_params = 400
+
+TrafficMAPFManager.n_evals = 5
+
+TrafficMAPFConfig.win_r = 1
+TrafficMAPFConfig.net_type = "quad"
+TrafficMAPFManager.update_model_n_params = 193
+
+# TrafficMAPFConfig.default_obst_flow = 1.0
+TrafficMAPFConfig.learn_obst_flow = True
+# TrafficMAPFConfig.net_type = "minidnn_mlp"
+# TrafficMAPFManager.update_model_n_params = 5254
+
+# TrafficMAPFConfig.net_type = "quad"
+# TrafficMAPFManager.update_model_n_params = 140
+
+# TrafficMAPFConfig.net_type = "minidnn_mlp"
+# TrafficMAPFManager.update_model_n_params = 2041
+# TrafficMAPFConfig.output_size = 1
+# TrafficMAPFConfig.hidden_size = 20
+# TrafficMAPFConfig.rotate_input = True
+
+Manager.max_evals = 10000
+
+TrafficMAPFConfig.gen_tasks = True
+TrafficMAPFConfig.use_cached_nn = False
+# TrafficMAPFConfig.all_json_path = "../Guided-PIBT/guided-pibt/benchmark-lifelong/sortation_small_narrow_800.json"
+TrafficMAPFConfig.map_path = "../Guided-PIBT/guided-pibt/benchmark-lifelong/maps/sortation_small_narrow.map"

@@ -1,0 +1,5 @@
+include "config/traffic_mapf/base.gin"
+
+experiment.name = "trafficMAPF"
+
+TrafficMAPFConfig.map_path = "../Guided-PIBT/guided-pibt/benchmark-lifelong/den520d_0_2000.json"

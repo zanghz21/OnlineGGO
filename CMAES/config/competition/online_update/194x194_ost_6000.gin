@@ -1,0 +1,59 @@
+include "config/competition/base.gin"
+
+Manager.initial_mean = 5
+sigma0 = 5
+base_map_path = "maps/competition/online_map/ost003d.json"
+
+CompetitionManager.lvl_width = 194
+CompetitionManager.lvl_height = 194
+CompetitionManager.bound_handle = "normalization"
+CompetitionManager.iterative_update = True
+CompetitionManager.online_update = True
+CompetitionManager.update_model_n_params = 3119
+
+CompetitionConfig.num_agents=6000
+CompetitionConfig.simulation_time = 1000
+CompetitionConfig.iter_update_model_type = @CompetitionCNNUpdateModel
+CompetitionConfig.update_interval = 20
+CompetitionConfig.past_traffic_interval = 20
+CompetitionConfig.warmup_time = 20
+
+CompetitionConfig.has_traffic_obs = True
+CompetitionConfig.has_gg_obs = False
+CompetitionConfig.has_task_obs = True
+CompetitionConfig.has_curr_pos_obs = False
+
+CompetitionConfig.h_update_late = False
+
+## EvolutionStrategyEmitter ##
+Manager.emitter_types = [(@EvolutionStrategyEmitter, 2)]
+
+EvolutionStrategyEmitter.sigma0 = %sigma0
+EvolutionStrategyEmitter.es = @CMAEvolutionStrategy
+EvolutionStrategyEmitter.ranker = "obj"
+EvolutionStrategyEmitter.selection_rule = "mu"
+EvolutionStrategyEmitter.restart_rule = "basic"
+EvolutionStrategyEmitter.batch_size = 25
+
+experiment.name = "194x194 ost 6000 on"
+Manager.is_em = False
+Manager.is_cma_mae = True # This CMA-ES is CMA-MAE with learning rate 0
+Manager.bounds = None
+Manager.max_evals = 10000
+
+CompetitionConfig.measure_names = ["wait_cost_std", "edge_weight_std"]
+CompetitionConfig.iter_update_max_iter = 5
+CompetitionConfig.iter_update_mdl_kwargs = {
+    "nc": 6,
+    "kernel_size": 3,
+    "n_hid_chan": 32,
+}
+
+# ## GridArchive ##
+GridArchive.dims = [25, 25]
+GridArchive.ranges = [[10, 20], [0, 50]]
+GridArchive.learning_rate = 0
+GridArchive.threshold_min = 0
+
+downsample/GridArchive.dims = [20, 20]
+downsample/GridArchive.ranges = [[10, 20], [0, 50]]

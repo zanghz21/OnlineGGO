@@ -1,0 +1,31 @@
+include "config/competition/base.gin"
+
+Manager.initial_mean = 5
+sigma0 = 5
+base_map_path = "maps/competition/human/pibt_warehouse_33x36_w_mode.json"
+
+CompetitionConfig.num_agents=400
+CompetitionConfig.simulation_time = 500
+CompetitionConfig.iter_update_model_type = @CompetitionCNNUpdateModel
+CompetitionConfig.update_interval = 20
+CompetitionConfig.past_traffic_interval = 20
+CompetitionConfig.warmup_time = 50
+CompetitionConfig.reset_weights_path = "maps/competition/ours/pibt_warehouse-33x36_w_mode_cma-es_400_agents_four-way-move.json"
+
+
+CompetitionConfig.measure_names = ["wait_cost_std", "edge_weight_std"]
+CompetitionConfig.iter_update_max_iter = 5
+CompetitionConfig.iter_update_mdl_kwargs = {
+    "nc": 10,
+    "kernel_size": 3,
+    "n_hid_chan": 32,
+}
+
+# ## GridArchive ##
+GridArchive.dims = [25, 25]
+GridArchive.ranges = [[10, 20], [0, 50]]
+GridArchive.learning_rate = 0
+GridArchive.threshold_min = 0
+
+downsample/GridArchive.dims = [20, 20]
+downsample/GridArchive.ranges = [[10, 20], [0, 50]]

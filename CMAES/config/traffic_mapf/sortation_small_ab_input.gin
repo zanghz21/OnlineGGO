@@ -1,0 +1,24 @@
+include "config/traffic_mapf/base.gin"
+
+experiment.name = "trafficMAPF sortation small"
+
+TrafficMAPFConfig.simu_time = 1000
+TrafficMAPFConfig.has_map = False
+TrafficMAPFConfig.has_path = False
+TrafficMAPFConfig.has_previous = False
+
+TrafficMAPFConfig.num_agents = 800
+
+TrafficMAPFConfig.net_type = "quad"
+TrafficMAPFConfig.net_input_type = "flow_and_traf_and_goal"
+TrafficMAPFConfig.past_traffic_interval = 20
+TrafficMAPFManager.update_model_n_params = 1320
+
+
+Manager.max_evals = 10000
+
+TrafficMAPFConfig.gen_tasks = True
+TrafficMAPFConfig.use_cached_nn = True
+TrafficMAPFConfig.use_lns = False
+# TrafficMAPFConfig.all_json_path = "../Guided-PIBT/guided-pibt/benchmark-lifelong/sortation_small_0_800.json"
+TrafficMAPFConfig.map_path = "../Guided-PIBT/guided-pibt/benchmark-lifelong/maps/sortation_small_kiva.map"

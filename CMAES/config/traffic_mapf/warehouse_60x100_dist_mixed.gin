@@ -1,0 +1,32 @@
+include "config/traffic_mapf/base.gin"
+
+
+experiment.name = "trafficMAPF warehouse 60x100 dist"
+
+TrafficMAPFConfig.simu_time = 1000
+
+TrafficMAPFConfig.has_map = False
+TrafficMAPFConfig.has_path = False
+TrafficMAPFConfig.has_previous = False
+
+TrafficMAPFConfig.win_r = 2
+TrafficMAPFConfig.net_type = "quad"
+
+TrafficMAPFManager.n_evals = 5
+
+TrafficMAPFManager.update_model_n_params = 560
+
+Manager.max_evals = 20000
+Manager.archive_save_freq = 100
+
+TrafficMAPFConfig.num_agents = 1800
+
+TrafficMAPFConfig.gen_tasks = True
+TrafficMAPFConfig.use_cached_nn = True
+
+TrafficMAPFConfig.task_dist_change_interval = 200
+TrafficMAPFConfig.task_random_type = "GaussianMixed"
+TrafficMAPFConfig.dist_sigma = 1.0
+TrafficMAPFConfig.dist_K = 1
+
+TrafficMAPFConfig.map_path = "../Guided-PIBT/guided-pibt/benchmark-lifelong/maps/warehouse_60x100_kiva.map"

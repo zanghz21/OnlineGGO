@@ -1,0 +1,26 @@
+include "config/traffic_mapf/base.gin"
+
+experiment.name = "trafficMAPF sortation small dist offline 600"
+
+TrafficMAPFManager.n_evals = 5
+
+TrafficMAPFConfig.simu_time = 1000
+TrafficMAPFConfig.has_map = False
+TrafficMAPFConfig.has_path = False
+TrafficMAPFConfig.has_previous = False
+
+TrafficMAPFConfig.num_agents = 600
+
+TrafficMAPFManager.update_model_n_params = 3948
+TrafficMAPFManager.offline = True
+
+Manager.max_evals = 50000
+
+TrafficMAPFConfig.gen_tasks = True
+TrafficMAPFConfig.use_cached_nn = True
+TrafficMAPFConfig.use_lns = False
+
+TrafficMAPFConfig.task_dist_change_interval = 200
+TrafficMAPFConfig.task_random_type = "Gaussian"
+
+TrafficMAPFConfig.map_path = "../Guided-PIBT/guided-pibt/benchmark-lifelong/maps/sortation_small_kiva.map"

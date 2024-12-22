@@ -1,0 +1,33 @@
+include "config/traffic_mapf/base.gin"
+
+experiment.name = "trafficMAPF ost period on"
+
+TrafficMAPFManager.n_evals = 2
+TrafficMAPFConfig.simu_time = 1000
+TrafficMAPFConfig.has_map = False
+TrafficMAPFConfig.has_path = False
+TrafficMAPFConfig.has_previous = False
+
+TrafficMAPFConfig.num_agents = 6000
+
+TrafficMAPFManager.update_model_n_params = 3084
+TrafficMAPFManager.offline = False
+TrafficMAPFManager.period_online = True
+
+Manager.max_evals = 10000
+
+TrafficMAPFConfig.gen_tasks = True
+TrafficMAPFConfig.use_cached_nn = True
+TrafficMAPFConfig.use_lns = False
+
+TrafficMAPFConfig.task_dist_change_interval = 200
+TrafficMAPFConfig.task_random_type = "GaussianMixed"
+TrafficMAPFConfig.task_assignment_strategy = "online_generate"
+
+TrafficMAPFConfig.iter_update_mdl_kwargs = {
+    "nc": 6,
+    "kernel_size": 3,
+    "n_hid_chan": 32,
+}
+
+TrafficMAPFConfig.map_path = "../Guided-PIBT/guided-pibt/benchmark-lifelong/maps/ost003d.map"
