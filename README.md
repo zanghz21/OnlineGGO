@@ -13,7 +13,8 @@ This is a hybrid C++/Python project. The simulation environment is written in C+
    ```
    git clone git@github.com:zanghz21/OnlineGGO.git
    cd OnlineGGO
-   sh init_submodule.sh
+   git submodule init
+   git submodule update
    ```
 
 1. **Download Boost:** From the root directory of the project, run the following to download the Boost 1.71, which is required for compiling C++ simulator. You don't have to install it on your system since it will be passed into the container and installed there.
