@@ -20,7 +20,7 @@ from env_search.utils.metric_logger import MetricLogger
 from env_search.warehouse.warehouse_manager import WarehouseManager
 from env_search.competition.competition_manager import CompetitionManager
 from env_search.traffic_mapf.traffic_mapf_manager import TrafficMAPFManager
-from env_search.learn2follow.learn2follow_manager import Learn2FollowManager
+# from env_search.learn2follow.learn2follow_manager import Learn2FollowManager
 import wandb
 
 # Just to get rid of pylint warning about unused import (adding a comment after
@@ -30,7 +30,7 @@ IMPORTS_FOR_GIN = (
     # WarehouseManager,
     CompetitionManager,
     TrafficMAPFManager, 
-    Learn2FollowManager
+    # Learn2FollowManager
 )
 
 EMITTERS_WITH_RESTARTS = (

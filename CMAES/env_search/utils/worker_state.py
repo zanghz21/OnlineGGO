@@ -13,8 +13,8 @@ from env_search.competition.config import CompetitionConfig
 from env_search.competition.module import CompetitionModule
 from env_search.traffic_mapf.config import TrafficMAPFConfig
 from env_search.traffic_mapf.module import TrafficMAPFModule
-from env_search.learn2follow.config import Learn2FollowConfig
-from env_search.learn2follow.module import Learn2FollowModule
+# from env_search.learn2follow.config import Learn2FollowConfig
+# from env_search.learn2follow.module import Learn2FollowModule
 
 #
 # Generic
@@ -83,11 +83,11 @@ def get_traffic_mapf_module() -> TrafficMAPFModule:
 # Learn2Follow module
 #
 
-LEARN2FOLLOW_MOD_ATTR = "learn2follow_module"
+# LEARN2FOLLOW_MOD_ATTR = "learn2follow_module"
 
 
-def init_learn2follow_module(config: Learn2FollowConfig):
-    set_worker_state(LEARN2FOLLOW_MOD_ATTR, Learn2FollowModule(config))
+# def init_learn2follow_module(config: Learn2FollowConfig):
+#     set_worker_state(LEARN2FOLLOW_MOD_ATTR, Learn2FollowModule(config))
 
-def get_learn2follow_module() -> Learn2FollowModule:
-    return get_worker_state(LEARN2FOLLOW_MOD_ATTR)
+# def get_learn2follow_module() -> Learn2FollowModule:
+#     return get_worker_state(LEARN2FOLLOW_MOD_ATTR)

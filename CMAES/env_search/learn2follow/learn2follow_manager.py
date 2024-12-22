@@ -6,7 +6,7 @@ import time
 import logging
 from logdir import LogDir
 
-from env_search.utils.worker_state import init_learn2follow_module
+# from env_search.utils.worker_state import init_learn2follow_module
 from env_search.learn2follow.run import run_learn2follow, process_learn2follow_results
 from env_search.learn2follow.module import Learn2FollowModule
 from env_search.learn2follow.config import Learn2FollowConfig
