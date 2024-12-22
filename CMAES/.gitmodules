@@ -1,0 +1,9 @@
+[submodule "WPPL"]
+	path = WPPL
+	url = git@github.com:zanghz21/WPPL.git
+[submodule "pybind11"]
+	path = pybind11
+	url = git@github.com:pybind/pybind11.git
+[submodule "learn2follow"]
+	path = learn2follow
+	url = git@github.com:zanghz21/learn2follow.git
