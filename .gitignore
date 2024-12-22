@@ -198,7 +198,6 @@ cython_debug/
 libtorch*
 test_torch
 
-*.json
 *.yaml
 
 ubuntu_warehouse
@@ -213,3 +212,10 @@ results/
 results_dist/
 results_multi_process/
 results_multi_process_dist/
+
+
+*.mplstyle
+run_files/
+
+*.pth
+*.onnx
