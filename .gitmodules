@@ -4,3 +4,6 @@
 [submodule "third_party/MiniDNN"]
 	path = third_party/MiniDNN
 	url = git@github.com:yixuan/MiniDNN.git
+[submodule "Guided-PIBT/guided-pibt/pybind11"]
+	path = Guided-PIBT/guided-pibt/pybind11
+	url = git@github.com:pybind/pybind11.git

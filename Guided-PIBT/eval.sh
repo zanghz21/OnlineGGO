@@ -1,0 +1,1 @@
+python multi_process_eval.py --exp_name=warehouse_small_narrow --rand_task_dist --n_workers=16 --n_evals=50 --is_runtime
