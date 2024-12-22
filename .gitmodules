@@ -1,0 +1,6 @@
+[submodule "third_party/eigen"]
+	path = third_party/eigen
+	url = git@github.com:PX4/eigen.git
+[submodule "third_party/MiniDNN"]
+	path = third_party/MiniDNN
+	url = git@github.com:yixuan/MiniDNN.git
