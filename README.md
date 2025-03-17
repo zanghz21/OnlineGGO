@@ -189,6 +189,8 @@ under CMAES/ directory. Find the ``scripts/eval/extract_net_weighs.sh``. Filling
 ### Evaluation
 (under CMAES/ directory) Find ``scripts/eval/eval_multiprocess.sh``. Filling the ``PROJECT_DIR`` and ``LOGDIR``. If using GPIBT ckpt, replace ``env_search/competition/multi_process_eval.py`` to ``env_search/traffic_mapf/multi_process_eval.py``. 
 
+To parse the results, please refer to ``CMAES/env_search/traffic_mapf/parse_multi_process_eval.py`` and ``CMAES/env_search/traffic_mapf/parse_eval.py``. They work well with both PIBT and GPIBT results. 
+
 ## Baseline Results
 ### Offline 
 1. optimization: same as the guidance policy
@@ -206,3 +208,14 @@ Visualization for congestion, weights ratio, and the number of reached goal per 
 
 under CMAES/ directory. Find the ``scripts/eval/vis_pibt.sh`` and ``scripts/eval/vis_gpibt.sh``. 
 Filling in related configuration option. 
+
+You can find figures under ``$LOGDIR/vis*``
+
+### Note
+1. For PIBT w/o guidance visualization, please set ``LOGDIR`` to an offline guidance log directory (in order to auto parse experiments settings like the map and the number of agents) and run ``vis_pibt.sh`` with ``--no_ckpt`` on. 
+1. The ``--save_files`` option is to record the number-of-task finished per timestep. If you do not want to record that info, you can turn it off to accelerate the simulation. 
+2. The ``--vis_only_final`` option is to skip all intermediate visualization and only visualize the cumulated info from timestep 1 to 5000. Skipping unnecessary visualization can accelerate it a lot. 
+
+### Figures in the paper.
+1. You can generate the Figure 1, 7, 8 in this manner. The default generated Figure 1 is the version without grid. 
+2. For Figure 10, please run ``vis_pibt.sh`` and then run the ``CMAES/env_search/competition/parse_tasks_time.py`` script. Please modify the ``base_log_dir`` variable in the python script accordingly. 
